@@ -1,0 +1,552 @@
+/* ----------------------------------------------- */
+/* fontnya */
+/* ----------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300&display=swap');
+
+/* ----------------------------------------------- */
+/* Lainnya? */
+/* ----------------------------------------------- */
+:root{
+    --main-color: #e02f6b;
+    --blue: #0000ff;
+    --blue-dark: #18293c;
+    --orange: #ffa500;
+    --green-yellow: #cddc39;
+    --pink-light: #efa2b4;
+    --cyan-light: #aef1ee;
+    --white: #ffffff;
+    --white-alpha-40: rgba(255, 255, 255, 0.40);
+    --white-alpha-25: rgba(255, 255, 255, 0.25);
+    --backdrop-filter-blur: blur(5px);
+}
+/* ----------------------------------------------- */
+/* pengaturan */
+/* ----------------------------------------------- */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+::before, ::after{
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom right, var(--pink-light), var(--cyan-light));
+    background-attachment: fixed;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+    color: var(--blue-dark);
+    line-height: 1.5;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+    padding: 35px 15px;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    /* background: var(--white-alpha-25); */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+}
+.navbar a{
+    position: relative;
+    margin: 0 10px;
+    font-size: 18px;
+    color: var(--main-color);
+    font-weight: 500;
+    text-decoration: none;
+}
+/* navbar animasi */
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--blue-dark);
+    transition: .3s;
+}
+.navbar a:hover::before{
+    width: 100%;
+}
+/* ----------------- */
+body.hide-scrolling{
+    overflow-y: hidden;
+}
+body::before{
+    content: '';
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--green-yellow);
+    z-index: -1;
+    opacity: 0.12;
+}
+a{
+    text-decoration: none;
+}
+h1, h2{
+    font-weight: 600;
+}
+h3, h4, h5, h6{
+    font-weight: 500;
+}
+img{
+    max-width: 100%;
+    vertical-align: middle;
+
+}
+ul{
+    list-style: none;
+}
+section{
+    background-color: var(--white-alpha-25);
+    border: 1px solid var(--white-alpha-40);
+    min-height: calc(100vh - 70px);
+    border-radius: 30px;
+    backdrop-filter: var(--backdrop-filter-blur);
+    margin: 20px;
+    opacity: 0; /* baru */
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* sampai sini */
+}
+section.active{ /* baru2 */
+    opacity: 1;
+    transform: translateY(0);  /* sampai sini2 */
+}
+.main{
+    max-width: 1200px;
+    margin: auto;
+    transition: all 0.3s ease-in;
+    position: relative;
+}
+/* .main.fade-out{
+    opacity: 0;
+} */
+.container{
+    padding: 0 40px;
+    width: 100%;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.align-item-center{
+    align-items: center;
+}
+.hidden{
+    display: none !important;
+}
+.sec-padding{
+    padding: 80px 0;
+}
+/* Bagian titik 3 */
+.flex-end{
+    justify-content: flex-end;
+}
+/* ----------------------------------------------- */
+/* Section Title */
+/* ----------------------------------------------- */
+.section-title{
+    padding: 0 15px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2{
+    font-size: 40px;
+    text-transform: capitalize;
+}
+/* ----------------------------------------------- */
+/* Scrollbar Smooth */
+/* ----------------------------------------------- */
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--white);
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+/* ----------------------------------------------- */
+/* button dan animasi */
+/* ----------------------------------------------- */
+button{
+    font-family: inherit;
+    user-select: none;
+}
+.btn{
+    line-height: 1.5;
+    background-color: var(--white-alpha-25);
+    border: 1px solid var(--white-alpha-40);
+    padding: 10px 28px;
+    display: inline-block;
+    border-radius: 30px;
+    color: var(--main-color);
+    font-weight: 500;
+    text-transform: capitalize;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    overflow: hidden;
+    vertical-align: middle;
+    transition: color 0.3s ease;
+}
+.btn::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    background-color: var(--main-color);
+    z-index: -1; 
+    transition: width 0.3s ease;
+}
+.btn:hover::before{
+    width: 100%;
+}
+.btn:hover{
+    color: var(--white);
+}
+/* ----------------------------------------------- */
+/* header */
+/* Bagian titik 3 */
+/* ----------------------------------------------- */
+.header{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    padding: 20px 0 0;
+}
+.header .nav-toggler{
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: var(--white-alpha-25);
+    border: 1px solid var(--white-alpha-40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px;
+    z-index: 1;
+}
+.header .nav-toggler span{
+    height: 2px;
+    width: 24px;
+    background-color: var(--main-color);
+    position: relative;
+}
+.header .nav-toggler span::before, .header .nav-toggler span::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color);
+    transition: all 0.3s ease;
+}
+.header .nav-toggler span::before{
+    left: 0;
+    transform: translateY(-8px);
+}
+.header .nav-toggler span::after{
+    right: 0;
+    transform: translateY(8px);
+}
+.header .nav-toggler:hover span::before, .header .nav-toggler:hover span::after{
+    width: 50%;
+}
+/* navigasi */
+.header .nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    padding: 35px 15px;
+}
+.header .nav-inner{
+    min-height: calc(100vh - 70px);
+    max-width: 1200px;
+    margin: auto;
+    background-color: var(--white-alpha-25);
+    border: 1px solid var(--white-alpha-40);
+    backdrop-filter: var(--backdrop-filter-blur);
+    padding: 50px 0;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header .nav-inner ul{
+    background-color: red;
+}
+/* ----------------------------------------------- */
+/* Home section */
+/* ----------------------------------------------- */
+.home-section{
+    display: flex;
+    padding: 120px 0;
+}
+.home-text, .home-img{
+    width: 50%;
+    padding: 15px;
+}
+.home-text p{
+    font-size: 18px;
+}
+.home-text h1{
+    font-size: 30px;
+    text-transform: capitalize;
+}
+.home-text h2{
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 300;
+    margin: 0 0 30px;
+}
+.home-text .btn{
+    margin:  0 15px 15px 0;
+}
+/* gambar utama */
+.home-img .img-box{
+    max-width: 360px;
+    background-color: var(--white-alpha-25);
+    border-radius: 50%;
+    /* border: 8px solid var(--white-alpha-25); */
+    margin: auto;
+}
+/* gambar saya */
+.home-img .img-box img{
+    width: 100%;
+    border-radius: 50%;
+}
+/* ----------------------------------------------- */
+/* about section */
+/* ----------------------------------------------- */
+.about-img{
+    width: 40%;
+    padding: 0 15px;
+}
+.about-text{
+    width: 60%;
+    padding: 0 15px;
+}
+.about-img .img-box{
+    background-color: var(--white-alpha-25);
+    max-width: 380px;
+    border: 1px solid var(--white-alpha-40);
+    margin: auto;
+    border-radius: 10px;
+}
+.about-img .img-box img{
+    width: 100%;
+}
+.about-text h3{
+    text-transform: capitalize;
+    font-size: 20px;
+    margin: 20px 0;
+}
+.about-text .skills{
+    display: flex;
+    flex-wrap: wrap;
+}
+.about-text .skill-item{
+    background-color: var(--white-alpha-25);
+    border: 1px solid var(--white-alpha-40);
+    padding: 5px 15px;
+    text-transform: capitalize; /** HURUF dari class skills menjadi huruf kapital*/
+    margin: 0 10px 10px 0;
+    border-radius: 20px;
+}
+.about-tabs{
+    margin-top: 20px;
+}
+.about-tabs .tab-item{
+    padding: 2px 0;
+    background-color: transparent;
+    border: none;
+    text-transform: capitalize;
+    display: inline-block;
+    color: var(--blue-dark);
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    margin: 0 30px 0 0;
+    position: relative;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+.about-tabs .tab-item:last-child{
+    margin: 0;
+}
+.about-tabs .tab-item::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    background-color: var(--blue-dark);
+    transition: width 0.3s ease;
+}
+.about-tabs .tab-item:hover::before{
+    width: 100%;
+}
+.about-tabs .tab-item.active::before{
+    width: 100%;
+    background-color: var(--main-color);
+}
+.about-tabs .tab-item.active{
+    color: var(--main-color);
+    opacity: 1;
+    cursor: auto;
+}
+.about-text .timeline{
+    position: relative;
+}
+.about-text .timeline::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    top: 0;
+    left: 5px;
+    background-color: var(--main-color);
+}
+.about-text .tab-content{
+    padding: 40px 0;
+    display: none;
+}
+.about-text .tab-content.active{
+    display: block;
+}
+.about-text .timeline-item{
+    margin-bottom: 30px;
+    position: relative;
+    padding: 10px 0 0 40px;
+}
+.about-text .timeline-item::before{
+    content: '';
+    position: absolute;
+    height: 11px;
+    width: 11px;
+    background-color: var(--main-color);
+    left: 0;
+    top: 16px;
+    border-radius: 50%;
+}
+.about-text .timeline-item:last-child{
+    margin-bottom: 0;
+    color: var(--main-color);
+    font-weight: 400;
+    margin: 0 0 10px;
+}
+.about-text .timeline-item .date{
+    display: block;
+    color: var(--main-color);
+    font-weight: 400;
+    margin: 0 0 10px;
+}
+.about-text .timeline-item h4{
+    font-size: 18px;
+    text-transform: capitalize;
+    margin: 0 0 10px;
+}
+.about-text .timeline-item h4 span{
+    font-weight: 400;
+}
+.about-text .btn{
+    margin:  0 15px 15px 0; 
+}
+
+/* ----------------------------------------------- */
+/* Contact Section */
+/* ----------------------------------------------- */
+.contact-form, .contact-info{
+    width: 50%;
+    padding: 0 15px;
+}
+.contact-form .input-group{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.contact-form .input-control::placeholder{
+    color: var(--blue-dark); 
+    opacity: 0.8;
+    font-weight: 300;
+}
+/* name email subject message */
+.contact-form .input-control{
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: var(--white-alpha-25);
+    padding: 0 20px;
+    color: var(--blue-dark);
+    border: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+.contact-form .input-control:focus{
+    border-color: var(--white-alpha-40);
+}
+/* Form Message */
+.contact-form textarea.input-control{
+    height: 120px;
+    resize: none;
+    padding-top: 15px;
+}
+/* email phone dan follow me */
+.contact-info-item{
+    margin: 0 0 30px;
+    padding: 0 0 0 20px;
+}
+.contact-info-item h3{
+    font-size: 20px;
+    text-transform: capitalize;
+    margin: 0 0 5px;
+}
+/* follow me atau social links */
+.contact-info-item .social-links a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    background-color: var(--white-alpha-25);
+    border: 1px solid var(--white-alpha-40);
+    color: var(--main-color);
+    border-radius: 50%;
+    margin: 6px 4px 0 0;
+    transition: all 0.3s ease;
+}
+/* social link kalau diarahkan */
+.contact-info-item .social-links a:hover{
+    color: var(--white);
+    background-color: var(--main-color);
+}
