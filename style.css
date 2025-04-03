@@ -462,7 +462,7 @@ button{
     font-weight: 400;
     margin: 0 0 10px;
 }
-.about-text .timeline-item .date{
+.about-text .timeline-item .date{ /* TANGGAL TAHUN date*/ 
     display: block;
     color: var(--main-color);
     font-weight: 400;
