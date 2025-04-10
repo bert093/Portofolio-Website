@@ -110,6 +110,9 @@ img{
 ul{
     list-style: none;
 }
+/* ----------------------------------------------- */
+/* SECTION */
+/* ----------------------------------------------- */
 section{
     background-color: var(--white-alpha-25);
     border: 1px solid var(--white-alpha-40);
@@ -121,10 +124,14 @@ section{
     transform: translateY(50px);
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* sampai sini */
 }
+
 section.active{ /* baru2 */
     opacity: 1;
     transform: translateY(0);  /* sampai sini2 */
 }
+/* ----------------------------------------------- */
+/* SECTION END */
+/* ----------------------------------------------- */
 .main{
     max-width: 1200px;
     margin: auto;
@@ -367,6 +374,9 @@ button{
     font-size: 20px;
     margin: 20px 0;
 }
+/* ----------------------------------------------- */
+/* SKILLS AND SKILL-ITEM*/
+/* ----------------------------------------------- */
 .about-text .skills{
     display: flex;
     flex-wrap: wrap;
@@ -379,6 +389,9 @@ button{
     margin: 0 10px 10px 0;
     border-radius: 20px;
 }
+/* ----------------------------------------------- */
+/* SKILLS AND SKILL-ITEM END*/
+/* ----------------------------------------------- */
 .about-tabs{
     margin-top: 20px;
 }
@@ -473,6 +486,11 @@ button{
     text-transform: capitalize;
     margin: 0 0 10px;
 }
+
+.about-text .timeline-item h4 a {
+    font-weight: 500;
+}
+
 .about-text .timeline-item h4 span{
     font-weight: 400;
 }
