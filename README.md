@@ -23,7 +23,7 @@ cd Portofolio-Website
 2. Install dependencies:
 
 ```
-npm install live-server
+npm install -g live-server
 ```
 
 3. Start the website
