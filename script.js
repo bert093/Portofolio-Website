@@ -13,6 +13,64 @@ tabsContainer.addEventListener("click", (e) =>{
     }
 });
 
+// Fullscreen Mode
+document.addEventListener("DOMContentLoaded", function () {
+    // Fullscreen button
+    const btn = document.createElement("button");
+    btn.textContent = "Enter Fullscreen?";
+    btn.style.position = "fixed";
+    btn.style.top = "10px";
+    btn.style.right = "10px";
+    btn.style.zIndex = "9999";
+    btn.style.padding = "10px 20px";
+    btn.style.borderRadius = "10px";
+    btn.style.border = "none";
+    btn.style.backgroundColor = "#e02f6b";
+    btn.style.color = "white";
+    btn.style.cursor = "pointer";
+    btn.style.boxShadow = "0 0 10px rgba(0,0,0,0.3)";
+    btn.style.fontFamily = "inherit";
+  
+    // Add to page
+    document.body.appendChild(btn);
+  
+    // When clicked
+    btn.addEventListener("click", function () {
+      const masuk = confirm("Want to open in fullscreen mode?");
+      if (!masuk) return;
+  
+      // Request Fullscreen
+      const docEl = document.documentElement;
+      const request =
+        docEl.requestFullscreen ||
+        docEl.webkitRequestFullscreen ||
+        docEl.msRequestFullscreen;
+  
+      if (request) {
+        request.call(docEl)
+          .then(() => {
+            // Successful fullscreen entry -> remove button.
+            btn.remove();
+          })
+          .catch(() => {
+            // Failed to enter fullscreen -> the button can remain.
+            alert("Gagal masuk ke fullscreen.");
+          });
+      } else {
+        alert("Browser tidak mendukung fullscreen.");
+      }
+    });
+  
+    // If the user presses esc to exit fullscreen -> the button can appear again.
+    document.addEventListener("fullscreenchange", function () {
+      if (!document.fullscreenElement && !document.getElementById("fullscreen-btn")) {
+        document.body.appendChild(btn);
+      }
+    });
+  });
+
+// Fullscreen Mode End
+
 // Portofolio Item Details Popup
 document.addEventListener("click", (e) => {
     if(e.target.classList.contains("view-project-btn")){
