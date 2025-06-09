@@ -7,6 +7,7 @@
 
 
 </div>
+
 ## 🚀 Getting Started
 
 Follow these instructions to set up and run the project locally.
