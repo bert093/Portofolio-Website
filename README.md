@@ -1,4 +1,12 @@
-# Portofolio-Website
+<div align="center">
+<h1>Portofolio Website</h4>
+</div>
+<div align="center">
+
+![Stars](https://img.shields.io/github/stars/bert093/Portofolio-Website?style=for-the-badge&color=b4befe) ![Last Commit](https://img.shields.io/github/last-commit/bert093/Portofolio-Website?style=for-the-badge&color=b4befe) ![Repo Size](https://img.shields.io/github/repo-size/bert093/Portofolio-Website?style=for-the-badge&color=b4befe)
+
+
+</div>
 ## 🚀 Getting Started
 
 Follow these instructions to set up and run the project locally.
