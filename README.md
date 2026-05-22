@@ -8,10 +8,11 @@
 
 </div>
 
-## 🚀 Getting Started
+## Getting Started
 
 Follow these instructions to set up and run the project locally.
-## ⚙️ Prerequisites
+
+## Prerequisites
 
 Make sure you have the following installed on your system:
 ```
@@ -20,7 +21,7 @@ npm / live-server
 Git
 ```
 
-## 📥 Installation
+## Installation
 
 1. Clone the repository:
 
@@ -42,7 +43,7 @@ cd Portofolio Website
 live-server
 ```
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 This project is built using:
 
@@ -50,7 +51,7 @@ This project is built using:
 - [x] CSS
 - [x] Javascript
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Portofolio Website
@@ -64,7 +65,7 @@ Portofolio Website
 
 ```
 
-## ✨ Features
+## Features
 
 - Smooth animations and transitions
 - Clean and modern UI
